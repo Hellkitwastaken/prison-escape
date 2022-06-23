@@ -228,7 +228,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
         invincibility = 1
         info.changeLifeBy(-1)
         for (let index = 0; index < 4; index++) {
-        	
+            prisoner.setFlag(SpriteFlag.Invisible, true)
+            pause(100)
+            prisoner.setFlag(SpriteFlag.Invisible, false)
+            pause(100)
         }
     }
 })
